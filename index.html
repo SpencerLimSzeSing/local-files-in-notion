@@ -29,7 +29,7 @@
 	let input = document.querySelector('input');
 	input.addEventListener('keyup', function (e) {
 		if (e.key === "Enter") {
-			let path = encodeURI(input.value.replace(/['"]+/g, '')).replace(/\+/g, '%2B');
+			let path = encodeURI(input.value.replace(/\\/g, '/').replace(/['"]+/g, ''));
 			let url = new URL(`https://${DOMAIN}/local-files-in-notion/index.html?f=` + path);
 			input.value = url.href;
 
@@ -70,6 +70,7 @@
 </style>
 </body>
 </html>
+
 
 
 

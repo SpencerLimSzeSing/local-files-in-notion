@@ -20,7 +20,7 @@
 	const file = urlParams.get('f');
 
 	if (file) {
-		window.location.href = 'localexplorer:' + file;
+		window.location.href = 'file:///' + file.replace(/\\/g, '/');
 		setTimeout(function () {
 			window.close();
 		}, 5000);
@@ -70,5 +70,6 @@
 </style>
 </body>
 </html>
+
 
 

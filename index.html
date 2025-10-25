@@ -30,7 +30,7 @@
 	input.addEventListener('keyup', function (e) {
 		if (e.key === "Enter") {
 			let path = encodeURI(input.value.replace(/['"]+/g, '')).replace(/\+/g, '%2B');
-			let url = new URL(`https://${DOMAIN}/local-files-in-notion/file.html?f=` + path);
+			let url = new URL(`https://${DOMAIN}/local-files-in-notion/index.html?f=` + path);
 			input.value = url.href;
 
 			// copy input field value to clipboard
@@ -70,6 +70,7 @@
 </style>
 </body>
 </html>
+
 
 
 

@@ -13,7 +13,7 @@
 </p>
 
 <script>
-	const DOMAIN = 'spencerlimszesing.github.io';
+	const DOMAIN = 'spencerlimszesing.github.io/local-files-in-notion';
 
 	const queryString = window.location.search;
 	const urlParams = new URLSearchParams(queryString);
@@ -30,7 +30,7 @@
 	input.addEventListener('keyup', function (e) {
 		if (e.key === "Enter") {
 			let path = encodeURI(input.value.replace(/['"]+/g, '')).replace(/\+/g, '%2B');
-			let url = new URL(`https://${DOMAIN}/file.html?f=` + path);
+			let url = new URL(`https://${DOMAIN}/?f=` + path);
 			input.value = url.href;
 
 			// copy input field value to clipboard
@@ -70,3 +70,4 @@
 </style>
 </body>
 </html>
+
